@@ -33,5 +33,11 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-manifest-plugin": "^2.2.0"
+  },
+  "dependencies": {
+    "@swup/body-class-plugin": "^1.0.2",
+    "@swup/fade-theme": "^1.0.5",
+    "@swup/scroll-plugin": "^1.0.6",
+    "swup": "^2.0.10"
   }
 }
