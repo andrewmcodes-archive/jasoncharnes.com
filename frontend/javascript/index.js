@@ -11,4 +11,6 @@ const swup = new Swup({
   ]
 })
 
+import "bridgetown-quick-search"
+
 console.info("Bridgetown is loaded!")

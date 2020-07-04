@@ -38,6 +38,7 @@
     "@swup/body-class-plugin": "^1.0.2",
     "@swup/fade-theme": "^1.0.5",
     "@swup/scroll-plugin": "^1.0.6",
+    "bridgetown-quick-search": "1.0.3",
     "swup": "^2.0.10"
   }
 }
