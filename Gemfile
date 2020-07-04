@@ -18,4 +18,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "bridgetown", "~> 0.15.0"
 
-gem "bridgetown-quick-search", "~> 1.0", :group => :bridgetown_plugins
+group :development do
+  gem "solargraph"
+end
+
+group :development, :test do
+  gem "standard"
+  gem "html-proofer"
+end
+
+group :bridgetown_plugins do
+  gem "bridgetown-seo-tag", "~> 3.0.5"
+  gem "bridgetown-quick-search", "~> 1.0.3"
+end
