@@ -1,0 +1,11 @@
+/plugins/
+/node_modules/
+/web_modules/
+dist/
+output/
+build/
+.cache/
+.build/
+.bridgetown-cache/
+.bridgetown-webpack/
+bin/

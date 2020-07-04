@@ -1,11 +1,11 @@
 module.exports = {
   purge: {
     mode: "production",
-    content: ["./src/**/*.html"],
+    content: ["./src/**/*.html"]
   },
   theme: {
-    extend: {},
+    extend: {}
   },
   variants: {},
-  plugins: [],
-};
+  plugins: []
+}

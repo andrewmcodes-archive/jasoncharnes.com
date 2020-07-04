@@ -9,5 +9,5 @@
 @tailwind utilities;
 
 .swup-transition-main {
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
