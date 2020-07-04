@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<div class="content">
+  {% render "component_preview/metadata", component: page.component %}
+  {% render "component_preview/variables", component: page.component %}
+</div>
+
+{% render "component_preview/preview_area", page: page %}
