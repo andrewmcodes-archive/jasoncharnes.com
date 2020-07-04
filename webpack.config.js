@@ -30,7 +30,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)/,
+        test: /.(js|jsx)/,
         use: {
           loader: "babel-loader",
           options: {
@@ -49,7 +49,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(s[ac]|c)ss$/,
+        test: /.(s[ac]|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
@@ -58,15 +58,27 @@ module.exports = {
             options: {
               sassOptions: {
                 includePaths: [
-                  path.resolve(__dirname, "src/_components")
+                  path.resolve(__dirname, "src/_components"),
+                  path.resolve(__dirname, "src/_includes"),
                 ],
               },
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              plugins: [
+                require("postcss-import"),
+                require("tailwindcss"),
+                require("autoprefixer"),
+              ],
             },
           },
         ],
       },
       {
-        test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+        test: /.woff2?$|.ttf$|.eot$|.svg$/,
         loader: "file-loader",
         options: {
           outputPath: "../fonts",
