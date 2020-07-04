@@ -1,11 +1,8 @@
 module.exports = {
-  purge: {
-    mode: "production",
-    content: ["./src/**/*.html"]
-  },
+  purge: false,
   theme: {
     extend: {}
   },
   variants: {},
-  plugins: []
+  plugins: [require("@tailwindcss/custom-forms")]
 }

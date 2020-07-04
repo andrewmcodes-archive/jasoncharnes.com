@@ -1,26 +1,35 @@
-{% if component.metadata.variables.size > 0 %}
-  <table>
-    <thead>
-      <tr>
-        <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for variable in component.metadata.variables %}
-        {% assign optional = "" %}
-        {% unless variable.required %}
-          {% assign optional = ", optional" %}
-        {% endunless %}
-        <tr>
-          <td><p><code>{{ variable.name }}</code></p></td>
-          <td><p>{{ variable.type }}{{ optional }}</p></td>
-          <td>{{ variable.description | markdownify }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-{% else %}
-  <p><em>No variables defined.</em></p>
-{% endif %}
+{% rendercontent "shared/section" %}
+  {% rendercontent "shared/container", direction: "column" %}
+    {% render "shared/section/header", text: "Variables"  %}
+    {% if component.metadata.variables.size > 0 %}
+      {% rendercontent "shared/table" %}
+        {% with headers %}
+          {% render "shared/table/header", text: "Variable" %}
+          {% render "shared/table/header", text: "Type" %}
+          {% render "shared/table/header", text: "Description" %}
+        {% endwith %}
+        {% with rows %}
+          {% for variable in component.metadata.variables %}
+            {% assign optional = "" %}
+            {% unless variable.required %}
+            {% assign optional = ", optional" %}
+            {% endunless %}
+            {% rendercontent "shared/table/row" %}
+              {% rendercontent "shared/table/data" %}
+                <code>{{ variable.name }}</code>
+              {% endrendercontent %}
+              {% rendercontent "shared/table/data" %}
+                {{ variable.type }}{{ optional }}
+              {% endrendercontent %}
+              {% rendercontent "shared/table/data" %}
+                {{ variable.description | markdownify }}
+              {% endrendercontent %}
+            {% endrendercontent %}
+          {% endfor %}
+        {% endwith %}
+      {% endrendercontent %}
+    {% else %}
+      <p><em>No variables defined.</em></p>
+    {% endif %}
+  {% endrendercontent %}
+{% endrendercontent %}

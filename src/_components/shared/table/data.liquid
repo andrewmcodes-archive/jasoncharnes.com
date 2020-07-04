@@ -1,0 +1,16 @@
+---
+name: Table Data Cell
+description: Contains data that makes up the table
+variables:
+  text:
+    - string
+    - The text you would like displayed as data.
+  content:
+    - content
+    - "Note: You can use text or content, but you should not use both!"
+---
+
+<td class="px-4 py-3 border-t-2 border-b-2 border-gray-200">
+  {{ text }}
+  {{ content }}
+</td>

@@ -1,0 +1,17 @@
+---
+name: Footer
+description: Displays the site footer
+variables:
+  metadata: [object, The site metadata object]
+---
+
+<footer class="py-4 text-gray-700 border-t-2">
+  {% rendercontent "shared/container", padding: "px-5 py-2" %}
+    <p class="mt-4 text-sm text-gray-500 sm:py-2 sm:mt-0">
+      Want to continue the conversation?
+      <a href="mailto:jason@charn.es" class="ml-1 text-gray-600" rel="noopener noreferrer" target="_blank">
+        Send me an email.
+      </a>
+    </p>
+  {% endrendercontent %}
+</footer>

@@ -1,0 +1,30 @@
+---
+name: Table
+description: A table element
+variables:
+  headers:
+    - with
+    - The headers you would like for your table
+  rows:
+    - with
+    - The rows you would like for your table
+  width:
+    - string
+    - Classes to modify the width like "lg:w-2/3"
+---
+
+{% assign width_classes = "" %}
+{% if width %}{% assign width_classes = width %}{% endif %}
+
+<div class="w-full mx-auto overflow-auto {{ width_classes }}">
+  <table class="w-full text-left whitespace-no-wrap shadow-inner table-auto">
+    <thead>
+      <tr>
+        {{ headers }}
+      </tr>
+    </thead>
+    <tbody>
+      {{ rows }}
+    </tbody>
+  </table>
+</div>

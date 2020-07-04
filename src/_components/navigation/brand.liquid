@@ -1,0 +1,24 @@
+---
+name: Navigation Brand
+description: Displays your navbar brand
+variables:
+  url:
+    - url
+    - The link for the navbar. Default is root.
+  text:
+    - string
+    - The text for your brand. If you set this, you do not need the content variable.
+  content:
+    - object
+    - The content for your brand. If you set this, you do not need the text variable.
+---
+{% assign brand_url = "/" %}
+
+{% if url %}
+  {% assign brand_url = url %}
+{% endif %}
+
+<a class="flex items-center mb-4 text-4xl font-medium text-white md:text-base md:mb-0" href="{{ brand_url }}">
+  {{text}}
+  {{content}}
+</a>

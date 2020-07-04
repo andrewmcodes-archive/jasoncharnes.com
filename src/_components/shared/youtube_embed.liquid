@@ -1,0 +1,17 @@
+---
+name: Youtube Embed
+description: An embedded youtube video component
+variables:
+  url:
+    - url
+    - "The youtube embed url. Note: you must use the embed url and not the link to the video or this will not work."
+---
+
+<iframe
+  width="560"
+  height="315"
+  src="{{ url }}"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>

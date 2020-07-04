@@ -1,13 +1,9 @@
-/* @import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities'; */
+@import "tailwindcss/base";
+@import "./custom/base.css";
 
-@tailwind base;
+@import "tailwindcss/components";
+@import "./custom/swup.css";
+@import "./custom/markdown.css";
+@import "./custom/bridgetown-quick-search.css";
 
-@tailwind components;
-
-@tailwind utilities;
-
-.swup-transition-main {
-  transition: opacity 0.2s;
-}
+@import "tailwindcss/utilities";

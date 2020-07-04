@@ -1,0 +1,18 @@
+---
+name: Description List
+description: A simple container for wrapping a list of groups and terms.
+variables:
+  padding:
+    - string
+    - The padding you would like the container to use. Default is "px-4 py-5 sm:p-0"
+  content:
+    - content
+    - The entries in your description list
+---
+
+{% assign padding_classes = "px-4 py-5 sm:p-0" %}
+{% if padding %}{% assign padding_classes = padding %}{% endif %}
+
+<div class="{{ padding_classes }}">
+  <dl>{{ content }}</dl>
+</div>

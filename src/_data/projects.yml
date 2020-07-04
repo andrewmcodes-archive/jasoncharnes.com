@@ -1,0 +1,12 @@
+- name: Fieldhelp
+  url: https://fieldhelp.io/
+  description: Knowledge base and support for startups and small businesses
+  image_path: "/images/fieldhelp.svg"
+- name: ClientSaid
+  url: https://clientsaid.com/
+  description: Social proof acquisition software for client-based businesses
+  image_path: "/images/clientsaid.svg"
+- name: HopeGrid
+  url: https://hopegrid.com/
+  description: Benevolence tracker/network for churches
+  image_path: "/images/hopegrid.svg"

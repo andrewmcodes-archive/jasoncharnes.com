@@ -1,0 +1,32 @@
+---
+name: Project card
+description: Displays a single project card
+variables:
+  project:
+    - object
+    - The project to display
+---
+
+<div class="w-full">
+  <div class="flex flex-col p-8 border-2 border-gray-200 rounded-lg sm:flex-row">
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 w-16 h-16 mb-4 text-red-600 bg-red-100 rounded-full sm:mr-8 sm:mb-0">
+      <img src="{{ project.image_path }}" alt="{{ project.name }} logo">
+    </div>
+    <div class="flex-grow">
+      <h2 class="mb-3 text-lg font-medium text-gray-900 title-font">
+        {{ project.name }}
+      </h2>
+      <p class="text-base leading-relaxed">
+        {{ project.description }}
+      </p>
+      <a class="inline-flex items-center mt-3 text-red-600" target="_blank" href="{{ project.url }}">
+        Learn More
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>

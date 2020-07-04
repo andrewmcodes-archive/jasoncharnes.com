@@ -1,0 +1,21 @@
+---
+name: Container
+description: A simple container for wrapping elements.
+variables:
+  padding:
+    - string
+    - The padding you would like the container to use. Default is "px-5 py-24"
+  direction:
+    - string
+    - The flex direction to use aka "column" or "row". Default is "row". Note that this is only for medium widths and up.
+  content: content
+---
+
+{% assign padding_classes = "px-5 py-24" %}
+{% if padding %}{% assign padding_classes = padding %}{% endif %}
+{% assign direction_class = "row" %}
+{% if direction %}{% assign direction_class = direction %}{% endif %}
+
+<div class="container w-full flex flex-col md:flex-{{ direction_class }} items-center {{ padding_classes }} mx-auto">
+  {{ content }}
+</div>

@@ -1,0 +1,19 @@
+---
+name: Navigation Link
+description: Displays a link for navbar
+variables:
+  url:
+    - url
+    - The url for your link.
+  text:
+    - string
+    - The text for your link.
+  target:
+    - string
+    - Specifies where to open the linked document. Defaults to "_site".
+---
+{% assign target_value = "_site" %}
+{% if target %}{% assign target_value = target %}{% endif %}
+{% unless url %}{% assign url="/" %}{% endunless %}
+
+<a href="{{ url }}" class="mr-5 hover:text-white" target="{{ target_value }}">{{ text }}</a>

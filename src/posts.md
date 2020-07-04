@@ -4,12 +4,9 @@ title: Posts
 permalink: /posts/
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+{% for category in site.categories %}
+  {% render "shared/section/header", text: category[0] %}
+  {% for post in category[1] %}
+    {% render "post/item", post: post %}
   {% endfor %}
-</ul>
-
-If you have a lot of posts, you may want to consider adding [pagination](https://www.bridgetownrb.com/docs/content/pagination)!
+{% endfor %}

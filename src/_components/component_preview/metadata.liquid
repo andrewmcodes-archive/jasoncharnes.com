@@ -1,9 +1,16 @@
-<div>
-  <dl>
-    <dt>Path:</dt>
-    <dd><code>{{ component.relative_path }}</code></dd>
-
-    <dt>Description:</dt>
-    <dd>{{ component.metadata.description | markdownify }}</dd>
-  </dl>
+<div class="w-full mx-auto overflow-auto bg-gray-200">
+  <div class="w-full p-8 mx-auto lg:w-2/3">
+    <div class="h-full bg-white">
+      {% rendercontent "shared/description_list" %}
+        {% rendercontent "shared/description_list/entry" %}
+          {% with term %}Path:{% endwith %}
+          {% with description %}<code>{{ component.relative_path }}</code>{% endwith %}
+        {% endrendercontent %}
+        {% rendercontent "shared/description_list/entry" %}
+          {% with term %}Description:{% endwith %}
+          {% with description %}{{ component.metadata.description | markdownify }}{% endwith %}
+        {% endrendercontent %}
+      {% endrendercontent %}
+    </div>
+  </div>
 </div>

@@ -1,0 +1,40 @@
+{% rendercontent "shared/table" %}
+  {% with headers %}
+    {% render "shared/table/header", text: "Header A" %}
+    {% render "shared/table/header", text: "Header B" %}
+    {% render "shared/table/header", text: "Header C" %}
+    {% render "shared/table/header", text: "Header D" %}
+  {% endwith %}
+  {% with rows %}
+    {% rendercontent "shared/table/row" %}
+      {% render "shared/table/data", text: "Data A" %}
+      {% render "shared/table/data", text: "Data B" %}
+      {% render "shared/table/data", text: "Data C" %}
+      {% render "shared/table/data", text: "Data D" %}
+    {% endrendercontent %}
+    {% rendercontent "shared/table/row" %}
+      {% render "shared/table/data", text: "Data A" %}
+      {% render "shared/table/data", text: "Data B" %}
+      {% render "shared/table/data", text: "Data C" %}
+      {% render "shared/table/data", text: "Data D" %}
+    {% endrendercontent %}
+    {% rendercontent "shared/table/row" %}
+      {% render "shared/table/data", text: "Data A" %}
+      {% render "shared/table/data", text: "Data B" %}
+      {% render "shared/table/data", text: "Data C" %}
+      {% render "shared/table/data", text: "Data D" %}
+    {% endrendercontent %}
+    {% rendercontent "shared/table/row" %}
+      {% render "shared/table/data", text: "Data A" %}
+      {% render "shared/table/data", text: "Data B" %}
+      {% render "shared/table/data", text: "Data C" %}
+      {% render "shared/table/data", text: "Data D" %}
+    {% endrendercontent %}
+    {% rendercontent "shared/table/row" %}
+      {% render "shared/table/data", text: "Data A" %}
+      {% render "shared/table/data", text: "Data B" %}
+      {% render "shared/table/data", text: "Data C" %}
+      {% render "shared/table/data", text: "Data D" %}
+    {% endrendercontent %}
+  {% endwith %}
+{% endrendercontent %}

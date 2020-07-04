@@ -1,0 +1,19 @@
+---
+name: Section
+description: A section
+variables:
+  text_color:
+    - string
+    - The tailwind classes you want to use for the text color. Defaults to "text-gray-700"
+  bg_color:
+    - string
+    - The tailwind classes you want to use for the background color. Defaults to nil
+  content: content
+---
+
+{% assign text_color_classes = "text-gray-700" %}
+{% if text_color %}{% assign text_color_classes = text_color %}{% endif %}
+
+<section class="{{ bg_color }} {{ text_color_classes}} w-full">
+  {{ content }}
+</section>
